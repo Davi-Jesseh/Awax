@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --StandardBrown: #b98b59;
+    --BackWhite: #f7f7f7;
+    --StandardGray: #bebebe;
+    --OtherBlack: #373737;
+    --WordGray: #aeaeae;
+}
+
+.container{
+    width: 100%;
+    max-width: 1110px;    
+    
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.activate{
+    border-bottom: 4px solid var(--StandardBrown)
+    
+}
+
+.light{
+    background-color: var(--BackWhite);
+    color: black;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+/* ==== Start Header ==== */
+header{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu-desktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    
+    
+}
+
+header nav {   
+    display: flex;    
+}
+
+
+
+header nav a{    
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;      
+    border-bottom: 4px solid transparent;
+    font-size: 14px;   
+    margin-left: 8px;   
+    height: 100px;
+    display: block;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;     
+    
+   
+}
+
+header nav a:hover{
+    border-bottom: 4px solid var(--StandardBrown) ;
+    color: #CCC;
+}
+
+/* ==== End Header ==== */
+
+/* ==== Start BG ==== */
+
+
+.banner{
+    background-image: url("/assets/images/banner_bg.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 100px);
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner .sliders{
+    width: 400vw;
+    height: 100%;
+}
+
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner .slide-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+
+.banner .slide-area h1{
+    font-weight: bold;
+    font-size: 4.24em;
+    color: white;
+    text-align: center;
+    line-height: 65px;    
+}
+
+.banner .slide-area h1 span{
+    color: var(--StandardBrown);
+    font-size: 1.02em;
+}
+
+.banner .slide-area h2{
+    font-size: 24px;
+    color: white;
+    
+}
+
+button{
+    padding: 15px 45px;
+    border-radius: 30px;
+    border: 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: var(--StandardBrown);
+    margin-top: 30px;
+    cursor: pointer;
+   
+}
+
+.banner .slide-area button:hover{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);   
+    background-color: #ac7f50;
+}
+
+.banner input[type="radio"]{
+    display: none;
+}
+
+.banner .navigation{
+    position: relative;
+    bottom: 40px;
+    left: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.banner .navigation .bar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--StandardBrown);
+    cursor: pointer;
+}
+
+.banner .navigation .activate{
+    background-color: var(--StandardBrown);
+}
+
+
+/* ==== End BG ==== */
+
+/* ==== Start Default ====*/
+
+.default{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    
+    
+}
+.default button{
+    background-color: #ad8050;
+}
+.default h2,h3{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default h2{
+    font-size: 22px;
+}
+
+.default h3{
+    font-size: 10px;
+    color: var(--WordGray);
+}
+
+.about_body{
+    display: flex;    
+    justify-content: space-between;
+    padding: 5px;    
+    margin-top: 20px;
+    
+    
+}
+
+.about_body figure{
+    width: 450px;
+    max-height: 270px;
+   
+    
+}
+
+.about_body img{
+    width: 100%;
+    height: 100%;
+}
+
+.text-with-button{
+    flex: 1;
+    padding: 0 25px;    
+    font-size: 17px;
+   
+}
+
+.service_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    width: 100%;
+    margin-top: 45px;
+    height: 200px;
+}
+
+.icon-service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+    padding: 20px 30px;
+    flex: 1;
+    text-align: center;    
+    border-left: 1px solid #CCC;
+    gap: 5px;
+    height: 100%;  
+    
+}
+
+.icon-service img{
+    width: 55px;
+    margin-bottom:20px;
+}
+
+.icon-service h3{
+    color: var(--WordGray);
+}
+
+.icon-service h2{
+    font-size: 17px;
+}
+
+.projects_body{
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.options-bar{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    width: 715px;
+    background-color: rgb(237,237,237);
+    border-radius: 25px;
+    border: 1px solid rgb(207, 207, 207);
+    padding: 1px 0;
+      
+}
+
+.options-bar span{
+    padding: 18px 16px 16px 13px;    
+    text-transform: uppercase;
+    border-right: 1px solid rgb(207, 207, 207);
+    cursor: pointer;
+    border-bottom:5px solid transparent ;
+
+}
+
+.options-bar span:hover{
+    border-bottom: 5px solid var(--StandardBrown) ;
+}
+
+
+.projects_body button{
+    margin-top: 0px;
+}
+
+.box_filter_img{
+    width: 280px;
+}
+
+
+.images-project{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1120px;
+}
+
+.photo_area{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.photo_area img{
+    width: inherit;
+    height: inherit;
+}
+
+.filter_and_text{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    color: white;
+    display: none;
+    justify-content: center;    
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    text-align: center;
+}
+
+.filter_and_text h5{
+    font-size: 20px;
+}
+
+.photo_area:hover .filter_and_text{
+    display: flex;
+}
+
+/* ==== End Default ====*/
