@@ -52,6 +52,7 @@ header{
     align-items: center;
     justify-content: center;
 
+
 }
 
 .menu-desktop{
@@ -60,7 +61,7 @@ header{
     justify-content: space-between;
     width: 100%;
     height: 100px;
-    
+    padding: 0 5px;
     
 }
 
@@ -106,15 +107,18 @@ header nav a:hover{
 }
 
 .banner .sliders{
-    width: 400vw;
+    width: 300vw;
     height: 100%;
+    display: flex;
+    
 }
 
 .banner .slide{
     width: 100vw;
-    height: 100%;
-    display: inline-block;
+    height: 100%;    
     background-color: rgba(0, 0, 0, 0.6);
+    transition: all ease 1.5s;
+    
 }
 
 .banner .slide-area{
@@ -126,6 +130,13 @@ header nav a:hover{
     flex-direction: column;
     gap: 12px;
     
+}
+
+.banner .slide img{
+    width: 100%;
+    height: 100%;
+    
+
 }
 
 .banner .slide-area h1{
@@ -165,11 +176,11 @@ button{
     background-color: #ac7f50;
 }
 
-.banner input[type="radio"]{
+input[type="radio"]{
     display: none;
 }
 
-.banner .navigation{
+.navigation{
     position: relative;
     bottom: 40px;
     left: 0;    
@@ -177,9 +188,10 @@ button{
     align-items: center;
     justify-content: center;
     gap: 15px;
+    
 }
 
-.banner .navigation .bar{
+.navigation .bar{
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -187,7 +199,7 @@ button{
     cursor: pointer;
 }
 
-.banner .navigation .activate{
+.navigation .activate{
     background-color: var(--StandardBrown);
 }
 
@@ -210,15 +222,15 @@ button{
 }
 .default h2,h3{
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .default h2{
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .default h3{
-    font-size: 10px;
+    font-size: 15px;
     color: var(--WordGray);
 }
 
@@ -369,5 +381,446 @@ button{
 .photo_area:hover .filter_and_text{
     display: flex;
 }
+
+
+.bg-team{
+    background-image: url("/assets/images/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.black-filter{    
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    
+    
+}
+
+
+/* ===== Start Team Body ======*/
+.team_body{
+    max-width: 950px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 35px;
+
+}
+
+.team_navi{
+    bottom: -17px;
+}
+
+/* ==== Slider Section Activer ==== */
+
+/* ===== Start Banner Slider =====*/
+
+#slide1:checked ~ .sliders .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .sliders .s1{
+    margin-left: -33.3%;
+}
+
+#slide3:checked ~ .sliders .s1{
+    margin-left: -67%;
+}
+
+#slide1:checked ~ .navigation .b1{
+    background-color: var(--StandardBrown);
+}
+
+#slide2:checked ~ .navigation .b2{
+    background-color: var(--StandardBrown);
+}
+
+#slide3:checked ~ .navigation .b3{
+    background-color: var(--StandardBrown);
+}
+
+#slide2:checked ~ .navigation .b1{
+    background-color: transparent;
+}
+
+#slide3:checked ~ .navigation .b1{
+    background-color: transparent;
+
+}
+
+
+/* ===== END Banner Slider =====*/
+
+
+/* ===== Start Team Slider =====*/
+
+#team-slide1:checked ~ .center .team_body .main-card{
+    margin-left: 0;
+}
+
+#team-slide2:checked ~ .center .team_body .main-card{
+    margin-left: -100%;
+}
+
+
+
+
+
+#team-slide1:checked ~  .navigation #one{
+    background-color: var(--StandardBrown);
+}
+
+#team-slide2:checked ~ .navigation #two{
+    background-color: var(--StandardBrown);
+}
+
+#team-slide2:checked ~ .navigation #one{
+    background-color: transparent;
+}
+
+
+
+/* ===== Start Team Slider =====*/
+
+
+/* ===== Start Client Slider =====*/
+
+#client-slide1:checked ~ .navigation #one{
+    background-color: var(--StandardBrown);
+}
+
+#client-slide2:checked ~ .navigation #two{
+    background-color: var(--StandardBrown);
+}
+
+#client-slide3:checked ~ .navigation #three{
+    background-color: var(--StandardBrown);
+}
+
+#client-slide2:checked ~ .navigation #one{
+    background-color: transparent;
+}
+
+#client-slide3:checked ~ .navigation #one{
+    background-color: transparent;
+}
+
+/* ===== END Client Slider =====*/
+
+/* ===== Start Premium Slider =====*/
+#premium-slide1:checked ~ .navigation #one{
+    background-color: var(--StandardBrown);
+}
+
+#premium-slide2:checked ~ .navigation #two{
+    background-color: var(--StandardBrown);
+}
+
+#premium-slide3:checked ~ .navigation #three{
+    background-color: var(--StandardBrown);
+}
+
+#premium-slide2:checked ~ .navigation #one{
+    background-color: transparent;
+}
+
+#premium-slide3:checked ~ .navigation #one{
+    background-color: transparent;
+}
+
+/* ===== END Premium Slider =====*/
+
+/* ==== *Slider Section Activer* ==== */
+
+.main-card{
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all ease 0.8s;
+}
+
+.cards{
+    width: calc(100% / 2 - 10px);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    
+    
+}
+
+.card{
+    background-color: white;
+    width: calc(100% / 3 - 12px);    
+    transition: all 0.4s ease;    
+    margin: 5px;
+}
+
+.content-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;   
+    gap:35px;
+    padding: 40px;
+}
+
+
+.content-card .details{
+    color: black;
+    text-align: center;
+}
+
+.content-card .img img{
+    width: 150px;
+}
+
+.details .name{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.details .fuction{
+    font-size: 14px;
+    color: rgb(170,170,170)
+}
+
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.media-icons .icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50% ;
+    background-color: rgb(190,190,190);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.media-icons .icon:hover{
+    background-color: var(--StandardBrown);
+}
+/* ===== End Team Body ======*/
+
+/* ==== Start Clients Body ==== */
+
+.clients_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    
+}
+
+.client-photo{
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.name-client{
+    font-size: 28px;
+    font-weight: 700;
+}
+.sub-tittle-client{
+    font-size: 20px;
+    color: rgb(125,125,125);
+    
+}
+
+.text-client{
+    text-align: center;
+    max-width: 745px;
+    color: rgb(125,125,125);
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    margin-top: 25px;    
+    
+    
+}
+
+.text-client img{
+    width: 30px;
+}
+
+.text-client p{
+    margin-top: 10px;
+}
+
+
+/* ==== End Clients Body ==== */
+
+/* ==== Start Section Enteprise ==== */
+.section-enteprise{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.marks-enteprise{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+/* ==== END Section Enteprise ==== */
+
+/* ==== Start Price ==== */
+.price_body{
+    display: flex;
+    width: 100%;
+    gap:10px;
+    margin-top: 40px;
+}
+.box-price{
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 10px;
+}
+.price-type{        
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.value{
+    text-align: center;
+}
+.value span:last-child{
+    color: rgb(125,125,125);
+}
+.price{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.vantages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-direction: column;
+    font-size: 12px;
+    color: rgb(125,125,125);
+    
+}
+.line{
+    width: 15px;
+    height: 1px;
+    background-color: rgb(125,125,125);
+}
+.default .bt-dark{
+    background-color: black;
+}
+/* ==== End Price ==== */
+
+
+
+/* ==== Start Premium =====*/
+
+.premium_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    width: 100%;    
+    border-bottom: 2px solid rgb(192, 192, 192);
+    padding: 60px 0;
+
+    
+}
+
+.feature-box{
+    flex: 1;
+    max-width: 490px;
+}
+.box-check-feature{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+    
+}
+.box-check-feature img{
+    width: 35px;
+    height: 30px;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.feature h1{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.feature p,li{
+    color: rgb(125,125,125);
+}
+
+
+
+
+/* ==== End Premium =====*/
+
+/* ==== Start Some Facts ====*/
+
+.facts_body{
+    display: flex;
+    justify-content: space-between;    
+    margin-top: 50px;
+}
+
+.box-fact{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.box-fact h2{
+    font-size: 20px;
+}
+.box-fact h3{
+    font-size: 12px;
+}
+.box-fact .line{
+    height: 5px;
+    width: 25px;
+}
+
+
+.number-and-text{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;    
+    height: 150px;
+}
+.number-fact{
+    font-size: 45px;
+    color: var(--StandardBrown);
+    font-weight: 700;
+}
+/* ==== End Some Facts ====*/
 
 /* ==== End Default ====*/
